@@ -27,24 +27,31 @@ body {
 
 .blue {
     grid-area: blue;
-    background-color: rgb(83, 206, 255);
+    background-color: rgb(4, 152, 250);
     border-bottom-right-radius: 100%;
 }
 
 .red {
     grid-area: red;
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(223, 4, 4);
     border-top-right-radius: 100%;
 }
 
 .yellow {
     grid-area: yellow;
-    background-color: rgb(251, 255, 15);
+    background-color: rgb(243, 247, 2);
     border-bottom-left-radius: 100%;
 }
 
 .green {
     grid-area: green;
-    background-color: rgb(152, 251, 152);
+    background-color: rgb(4, 179, 4);
     border-top-left-radius: 100%;
+}
+
+
+/*selected class will show up when a color is pressed*/
+
+.selected {
+    opacity: 0.8;
 }
