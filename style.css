@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: rgb(208, 255, 239);
+    background-color: rgb(2, 56, 38);
 }
 
 .main-game {
@@ -10,6 +10,10 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+h1 {
+    color: rgb(201, 225, 247);
 }
 
 
@@ -28,7 +32,7 @@ body {
 
 .blue {
     grid-area: blue;
-    background-color: rgb(4, 152, 250);
+    background-color: rgb(3, 116, 190);
     border: 3px solid #000;
     border-bottom-right-radius: 100%;
 }
@@ -41,7 +45,7 @@ body {
 
 .yellow {
     grid-area: yellow;
-    background-color: rgb(255, 255, 0);
+    background-color: rgb(226, 226, 3);
     border-bottom-left-radius: 100%;
 }
 
