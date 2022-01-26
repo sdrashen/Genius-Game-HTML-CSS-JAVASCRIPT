@@ -53,5 +53,5 @@ body {
 /*selected class will show up when a color is pressed*/
 
 .selected {
-    opacity: 0.8;
+    opacity: 0.6;
 }

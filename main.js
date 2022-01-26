@@ -54,7 +54,7 @@ let checkOrder = () => {
     }
     /**Using "==" because we are comparing different types. clickOrder is from a different array */
     if (clickedOrder.length == order.length) {
-        alert(`Ponctuation: ${score}\nCorrect! Iniciating next level`)
+        alert(`Ponctuation: ${score}\nCorrect! Starting next level`)
         nextLevel()
     }
 }
@@ -66,7 +66,54 @@ let click = color => {
     createColorElement(color).classList.add('selected')
     setTimeout(() => {
         createColorElement(color).classList.remove('selected')
-    })
-
-    checkOrder()
+        checkOrder()
+    }, 250)
 }
+
+//Function that returns the color
+let createColorElement = color => {
+    if (color == 0) {
+        return green
+    } else if (color == 1) {
+        return red
+    } else if (color == 2) {
+        return yellow
+    } else if (color == 3) {
+        return blue
+    }
+}
+
+//Function for the next level. Increases the score and generates a new order.
+let nextLevel = () => {
+    score++
+    shuffleOrder()
+}
+
+//Game over function
+let gameOver = () => {
+    alert(`Ponctuation: ${score}!\nYou lost. Click ok to try again`)
+    order = []
+    clickedOrder = []
+    playGame()
+}
+
+//Function of the begining of the game
+let playGame = () => {
+    alert('Welcome to Genius! Starting a new game!')
+    score = 0
+
+    nextLevel()
+}
+
+// green.addEventListener('click', click(0))
+// red.addEventListener('click', click(1))
+// yellow.addEventListener('click', click(2))
+// blue.addEventListener('click', click(3))
+
+//Events of click for the colors
+green.onclick = () => click(0)
+red.onclick = () => click(1)
+yellow.onclick = () => click(2)
+blue.onclick = () => click(3)
+
+playGame()
