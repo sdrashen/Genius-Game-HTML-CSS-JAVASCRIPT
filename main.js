@@ -1,5 +1,5 @@
-let order = []
-let clickedOrder = []
+let order = [] //Random order of the colors
+let clickedOrder = [] //Order of the clicks
 let score = 0
 
 //0 = green
